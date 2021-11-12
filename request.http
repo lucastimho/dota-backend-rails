@@ -1,0 +1,27 @@
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "player_id": 1
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### User update
+PATCH  http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+  "player_id": 2
+}
