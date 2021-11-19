@@ -11,7 +11,7 @@ class PlayersController < ApplicationController
     player = Player.new(
       account_id: params[:account_id],
       name: response["profile"]["name"],
-      person_name: response["profile"]["personname"],
+      person_name: response["profile"]["personaname"],
       mmr: response["mmr_estimate"]["estimate"]
     )
     if player.save
@@ -23,9 +23,9 @@ class PlayersController < ApplicationController
   def update
     response = HTTP.get("https://api.opendota.com/api/players/#{params[:account_id]}").parse(:json)
     player = Player.find_by(id: params[:id])
-    player.account_id = params[:account_id]
+    player.account_id = params[:account_id] || player.account_id
     player.name = response["profile"]["name"]
-    player.person_name = response["profile"]["personname"]
+    player.person_name = response["profile"]["personaname"]
     player.mmr = response["mmr_estimate"]["estimate"]
     if player.save
       render json: player

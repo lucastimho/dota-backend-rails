@@ -6,7 +6,7 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password",
   "password_confirmation": "password",
-  "player_id": 1
+  "account_id": 124266352
 }
 
 ### Sessions create (login)
@@ -23,9 +23,25 @@ PATCH  http://localhost:3000/users/1
 Content-Type: application/json
 
 {
-  "player_id": 2
+  "account_id": 188172182
 }
 
-### Players Index
+### Players Index / Show
 GET http://localhost:3000/players
 Content-Type: application/json
+
+### Player Create to Rails database
+POST http://localhost:3000/players
+Content-Type: application/json
+
+{
+  "account_id": 25907144
+}
+
+### Players Update / Refresh
+PATCH http://localhost:3000/players/1
+Content-Type: application/json
+
+{
+  "account_id": 145550466
+}
