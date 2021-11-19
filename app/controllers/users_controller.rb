@@ -22,4 +22,8 @@ class UsersController < ApplicationController
       render json: {errors: user.errors.full_messages}, status: 422
     end
   end
+  def recent
+    response = HTTP.get("https://api.opendota.com/api/players/#{current_user.account_id}/recentMatches")
+    render json: response
+  end
 end

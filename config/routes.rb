@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get "/players/:account_id" => "players#show"
   post "/players" => "players#create"
   patch "/players/:id" => "players#update"
-  post "followings" => "followings#create"
-  patch "followings/:id" => "followings#update"
+  post "/followings" => "followings#create"
+  patch "/followings/:id" => "followings#update"
   delete "/followings/:id" => "followings#destroy"
+  get "/recent" => "users#recent"
 end

@@ -3,7 +3,7 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "lucas@example.com",
   "password": "password",
   "password_confirmation": "password",
   "account_id": 124266352
@@ -14,7 +14,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "lucas@example.com",
   "password": "password"
 }
 
@@ -48,10 +48,27 @@ Content-Type: application/json
 }
 
 ### Following List Create
-POST 
+POST http://localhost:3000/followings
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDM2MTN9.Y-aL6ACrjQzUhhlieGIBw8jsy4cGVHEPYodj-AjwtyY
+
+{
+  "player_id": 1
+}
 
 ### Following List Update
-PATCH
+PATCH http://localhost:3000/followings/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDM2MTN9.Y-aL6ACrjQzUhhlieGIBw8jsy4cGVHEPYodj-AjwtyY
+
+{
+  "player_id": 1
+}
 
 ### Following List Delete
-DELETE 
+DELETE http:localhost:3000/followings/1
+
+### Recent Matches
+GET http://localhost:3000/recent
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDQxOTJ9.rBpbmUV3FUkMpouc119_FbsPAlQ7FAvcwES79poX3gE
