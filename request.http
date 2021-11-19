@@ -19,8 +19,9 @@ Content-Type: application/json
 }
 
 ### User update
-PATCH  http://localhost:3000/users/1
+PATCH  http://localhost:3000/users/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzc0Mzk3Mzh9.KtSc1wULfY9nWdEa7mdzfDQTUnw8IAns0sPslSGaZgM
 
 {
   "account_id": 188172182
@@ -45,3 +46,12 @@ Content-Type: application/json
 {
   "account_id": 145550466
 }
+
+### Following List Create
+POST 
+
+### Following List Update
+PATCH
+
+### Following List Delete
+DELETE 
