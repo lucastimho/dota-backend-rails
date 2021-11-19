@@ -4,12 +4,12 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
-      player_id: params[:player_id]
+      account_id: params[:account_id]
     )
     if user.save
       render json: { message: "User created successfully" }, status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: :bad_request
+      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
   end
   def update
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     user.email = params[:email] || user.email
     user.password = params[:password] || user.password
     user.password_confirmation = params[:password_confirmation] || user.password_confirmation
-    user.player_id = params[:player_id] || user.player_id
+    user.account_id = params[:account_id] || user.account_id
     if user.save
       render json: {message: "User updated successfully"}
     else

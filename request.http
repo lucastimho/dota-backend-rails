@@ -25,3 +25,7 @@ Content-Type: application/json
 {
   "player_id": 2
 }
+
+### Players Index
+GET http://localhost:3000/players
+Content-Type: application/json
