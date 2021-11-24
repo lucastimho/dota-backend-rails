@@ -12,6 +12,7 @@ class PlayersController < ApplicationController
       account_id: params[:account_id],
       name: response["profile"]["name"],
       person_name: response["profile"]["personaname"],
+      avatar_full: response["profile"]["avatarfull"],
       mmr: response["mmr_estimate"]["estimate"]
     )
     if player.save
@@ -26,6 +27,7 @@ class PlayersController < ApplicationController
     player.account_id = params[:account_id] || player.account_id
     player.name = response["profile"]["name"]
     player.person_name = response["profile"]["personaname"]
+    player.avatar_full = response["profile"]["avatarfull"]
     player.mmr = response["mmr_estimate"]["estimate"]
     if player.save
       render json: player
