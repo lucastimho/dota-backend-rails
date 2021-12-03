@@ -13,7 +13,7 @@ class PlayersController < ApplicationController
       name: response["profile"]["name"],
       person_name: response["profile"]["personaname"],
       avatar_full: response["profile"]["avatarfull"],
-      mmr: response["mmr_estimate"]["estimate"]
+      mmr: response["mmr_estimate"]["estimate"],
     )
     if player.save
       render json: player
