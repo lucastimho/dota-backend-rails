@@ -21,7 +21,7 @@ Content-Type: application/json
 ### User update
 PATCH  http://localhost:3000/users/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzc0Mzk3Mzh9.KtSc1wULfY9nWdEa7mdzfDQTUnw8IAns0sPslSGaZgM
+Authorization: Bearer
 
 {
   "account_id": 188172182
@@ -36,7 +36,7 @@ POST http://localhost:3000/players
 Content-Type: application/json
 
 {
-  "account_id": 25907144
+  "account_id": 56939869
 }
 
 ### Players Update / Refresh
@@ -50,16 +50,16 @@ Content-Type: application/json
 ### Following List Create
 POST http://localhost:3000/followings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDM2MTN9.Y-aL6ACrjQzUhhlieGIBw8jsy4cGVHEPYodj-AjwtyY
+Authorization: Bearer 
 
 {
-  "player_id": 1
+  "player_id": 3
 }
 
 ### Following List Update
 PATCH http://localhost:3000/followings/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDM2MTN9.Y-aL6ACrjQzUhhlieGIBw8jsy4cGVHEPYodj-AjwtyY
+Authorization: Bearer 
 
 {
   "player_id": 1
@@ -71,4 +71,4 @@ DELETE http:localhost:3000/followings/1
 ### Recent Matches
 GET http://localhost:3000/recent
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDQxOTJ9.rBpbmUV3FUkMpouc119_FbsPAlQ7FAvcwES79poX3gE
+Authorization: Bearer 
