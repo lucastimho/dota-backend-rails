@@ -36,7 +36,7 @@ POST http://localhost:3000/players
 Content-Type: application/json
 
 {
-  "account_id": 25907144
+  "account_id": 56939869
 }
 
 ### Players Update / Refresh
@@ -50,10 +50,10 @@ Content-Type: application/json
 ### Following List Create
 POST http://localhost:3000/followings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzc0NDM2MTN9.Y-aL6ACrjQzUhhlieGIBw8jsy4cGVHEPYodj-AjwtyY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzg2NTIyNDd9.eeQdyhK6WT1RN9Y_FBx82QHI7B8RRnO8_sbxjuiPmKo
 
 {
-  "player_id": 1
+  "player_id": 3
 }
 
 ### Following List Update

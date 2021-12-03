@@ -1,4 +1,7 @@
 class FollowingsController < ApplicationController
+  def show
+    render json: User.find_by(id: current_user.id).players
+  end
   def create
     following = Following.new(
       user_id: current_user.id,
