@@ -3,10 +3,10 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "email": "lucas@example.com",
+  "email": "test2@test.com",
   "password": "password",
   "password_confirmation": "password",
-  "account_id": 124266352
+  "account_id": 12345678
 }
 
 ### Sessions create (login)
@@ -21,7 +21,7 @@ Content-Type: application/json
 ### User update
 PATCH  http://localhost:3000/users/
 Content-Type: application/json
-Authorization: Bearer
+Authorization: Bearer 
 
 {
   "account_id": 188172182
@@ -36,15 +36,15 @@ POST http://localhost:3000/players
 Content-Type: application/json
 
 {
-  "account_id": 56939869
+  "account_id": 898754153
 }
 
 ### Players Update / Refresh
-PATCH http://localhost:3000/players/1
+PATCH http://localhost:3000/players/4
 Content-Type: application/json
 
 {
-  "account_id": 145550466
+  "account_id": 157475523
 }
 
 ### Following List Create
@@ -53,22 +53,22 @@ Content-Type: application/json
 Authorization: Bearer 
 
 {
-  "player_id": 3
+  "player_id": 4
 }
 
 ### Following List Update
-PATCH http://localhost:3000/followings/1
+PATCH http://localhost:3000/followings/4
 Content-Type: application/json
 Authorization: Bearer 
 
 {
-  "player_id": 1
+  "player_id": 3
 }
 
 ### Following List Delete
-DELETE http:localhost:3000/followings/1
+DELETE http://localhost:3000/followings/2
 
 ### Recent Matches
-GET http://localhost:3000/recent
-Content-Type: application/json
-Authorization: Bearer 
+# GET http://localhost:3000/recent
+# Content-Type: application/json
+# Authorization: Bearer 
