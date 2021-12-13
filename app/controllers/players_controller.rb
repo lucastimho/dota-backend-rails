@@ -14,6 +14,8 @@ class PlayersController < ApplicationController
       person_name: response["profile"]["personaname"],
       avatar_full: response["profile"]["avatarfull"],
       mmr: response["mmr_estimate"]["estimate"],
+      team: HTTP.get("https://api.opendota.com/api/players/#{params[:account_id]}/pros").parse(:json)[0]["team_name"],
+      rank: response["leaderboard_rank"]
     )
     if player.save
       render json: player
@@ -29,6 +31,8 @@ class PlayersController < ApplicationController
     player.person_name = response["profile"]["personaname"]
     player.avatar_full = response["profile"]["avatarfull"]
     player.mmr = response["mmr_estimate"]["estimate"]
+    player.team = HTTP.get("https://api.opendota.com/api/players/#{params[:account_id]}/pros").parse(:json)[0]["team_name"]
+    player.rank = response["leaderboard_rank"]
     if player.save
       render json: player
     else

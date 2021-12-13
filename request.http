@@ -36,11 +36,7 @@ POST http://localhost:3000/players
 Content-Type: application/json
 
 {
-<<<<<<< HEAD
   "account_id": 898754153
-=======
-  "account_id": 56939869
->>>>>>> 45442339f86a6a22261aa205acdfa89c44e0c969
 }
 
 ### Players Update / Refresh
@@ -48,23 +44,16 @@ PATCH http://localhost:3000/players/4
 Content-Type: application/json
 
 {
-  "account_id": 157475523
+  "account_id": 145550466
 }
 
 ### Following List Create
 POST http://localhost:3000/followings
 Content-Type: application/json
-<<<<<<< HEAD
 Authorization: Bearer 
 
 {
   "player_id": 4
-=======
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Mzg2NTIyNDd9.eeQdyhK6WT1RN9Y_FBx82QHI7B8RRnO8_sbxjuiPmKo
-
-{
-  "player_id": 3
->>>>>>> 45442339f86a6a22261aa205acdfa89c44e0c969
 }
 
 ### Following List Update
