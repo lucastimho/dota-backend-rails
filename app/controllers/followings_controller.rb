@@ -22,7 +22,7 @@ class FollowingsController < ApplicationController
     end
   end
   def destroy
-    Following.destroy_by(id: params[:id])
+    Following.destroy_by(user_id: current_user.id, player_id: params[:player_id])
     render json: {message: "Deleted Sucessfully"}
   end
 end
