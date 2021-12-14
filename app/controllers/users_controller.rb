@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     end
   end
   def recent
-    response = HTTP.get("https://api.opendota.com/api/players/#{current_user.account_id}/recentMatches")
+    response = HTTP.get("https://api.opendota.com/api/players/#{current_user.account_id}/recentMatches").parse(:json)
     render json: response
   end
 end
