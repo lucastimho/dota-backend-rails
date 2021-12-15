@@ -16,8 +16,7 @@ class UsersController < ApplicationController
     end
   end
   def update
-    user = User.find_by(id: current_user.id)
-    user.email = params[:email] || user.email
+    user = User.find_by(id: params[:id])
     user.account_id = params[:account_id] || user.account_id
     if user.save
       render json: user
