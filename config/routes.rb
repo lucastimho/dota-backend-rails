@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   delete "/followings/:player_id" => "followings#destroy"
   get "/recent" => "users#recent"
   get "/user" => "users#show"  
+  root 'welcome#index'
 end
